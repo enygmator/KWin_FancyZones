@@ -25,7 +25,12 @@ You can also do `make disable` and `make enable` to manually disable/enable, OR 
 
 ## Customization
 
-If you want to customize the areas, you'll need to edit the `AREAS_AND_DIMS` constant in the file `./contents/code/main.js`.
+1. If you want to customize the areas, you'll need to edit the `AREAS_AND_DIMS` constant in the file `./contents/code/main.js`.
+2. After modification of the files based on steps given below, you need to execute `make update` from the folder in which this README is present.
+
+> If it doesn't work, manually execute `make disable` and `make enable` after `make update`.
+
+### Customizing `AREAS_AND_DIMS`
 
 `AREAS_AND_DIMS` is a constant array of configurations in JSON format.  
 Each configuration has the following format:
@@ -112,6 +117,20 @@ const AREAS_AND_DIMS = [
 How it looks in the menu:
 
 ![KWin FancyZones in action](KWin_FancyZones_in_action.jpg)
+
+## LICENSE
+
+THis project uses the GNU GENERAL PUBLIC LICENSE Version 3. For more info, refer the LICENSE file or for easier understanding, [this link](https://choosealicense.com/licenses/gpl-3.0/#)
+
+## Contribution
+
+If things aren't working for you PLEASE do file an issue. I am not a seasoned KDE developer. I'm barely a beginner. The information out there seems to be a bit sparse, so I'm trying to work things out as I go.
+
+Please do contribute if your have ideas, or experience or both!  
+You can suggest ideas by filing an issue.
+
+I'll soon add a UI for managing the `AREAS_AND_DIMS` constant. If someone can do that, it would be amazing.
+
 
 ## Helpful Developer info
 
