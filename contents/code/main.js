@@ -1,6 +1,103 @@
 const AREAS_AND_DIMS = [
 	{
-		id: "vertical_split",
+		id: "middle_lr",
+		areas: [
+			{
+				id: "left-float",
+				x: 0,
+				y: 0.246527778,
+				width: 0.4453125,
+				height: 0.571428571,
+			},
+			{
+				id: "middle",
+				x: 0.107421875,
+				y: 0,
+				width: 0.72265625,
+				height: 1,
+			},
+			{
+				id: "right-float",
+				x: 0.5546875,
+				y: 0.246527778,
+				width: 0.4453125,
+				height: 0.571428571,
+			}
+		]
+	},
+	{
+		id: "academics",
+		areas: [
+			{
+				id: "left",
+				x: 0,
+				y: 0,
+				width: 0.6796875,
+				height: 1,
+			},
+			{
+				id: "right-lane",
+				x: 0.6796875,
+				y: 0,
+				width: 0.3203125,
+				height: 1,
+			}
+		]
+	},
+	{
+		id: "redox",
+		areas: [
+			{
+				id: "left",
+				x: 0,
+				y: 0,
+				width: 0.62109375,
+				height: 1,
+			},
+			{
+				id: "right-up",
+				x: 0.62109375,
+				y: 0,
+				width: 0.37890625,
+				height: 0.419054441,
+			},
+			{
+				id: "right-down",
+				x: 0.62109375,
+				y: 0.419054441,
+				width: 0.37890625,
+				height: 0.580945559,
+			}
+		]
+	},	
+	{
+		id: "redox_eq",
+		areas: [
+			{
+				id: "left",
+				x: 0,
+				y: 0,
+				width: 0.62109375,
+				height: 1,
+			},
+			{
+				id: "right-up",
+				x: 0.62109375,
+				y: 0,
+				width: 0.37890625,
+				height: 0.508595989,
+			},
+			{
+				id: "right-down",
+				x: 0.62109375,
+				y: 0.508595989,
+				width: 0.37890625,
+				height: 0.491404011,
+			}
+		]
+	},
+	{
+		id: "horizontal_halves",
 		areas: [
 			{
 				id: "left",
@@ -19,31 +116,31 @@ const AREAS_AND_DIMS = [
 		]
 	},
 	{
-		id: "middle_left_right",
+		id: "horizontal_triple",
 		areas: [
 			{
-				id: "middle",
-				x: 0.20,
+				id: "left",
+				x: 0,
 				y: 0,
-				width: 0.60,
+				width: 0.33,
 				height: 1,
 			},
 			{
-				id: "left-float",
-				x: 0,
-				y: 0.25,
-				width: 0.35,
-				height: 0.50,
+				id: "middle",
+				x: 0.33,
+				y: 0,
+				width: 0.34,
+				height: 1,
 			},
 			{
-				id: "right-float",
-				x: 0.65,
-				y: 0.25,
-				width: 0.35,
-				height: 0.50,
+				id: "right",
+				x: 0.67,
+				y: 0,
+				width: 0.33,
+				height: 1,
 			}
 		]
-	}
+	},
 ]
 
 function setWindowsSizeAndPos(client, x, y, width, height) {
