@@ -1,4 +1,119 @@
+# KWin_FancyZones
 
+This is a project that aims to bring FancyZones functionality to KWin which is the default windows manager for Plasma Desktop from KDE 💖 (Thanks to them for all the open-source stuff)
+
+This is a very pre-mature version, using some shortcuts to achieve its goal.
+
+Follow steps below to install it. After installing it, you can simply click on the window's user action menu. It can be manually invoked by clicking on the extreme top-left corener of a window with a title bar OR by selecting the window you want to manipulate and using the default keyboard shortcut `Alt + F3`.
+
+Then open the `Extensions` dropdown in which you'll have to open the `FancyZones` area dropdown.
+
+In here you'll find multiple dropdowns with the names of configurations (you created) and opening them will list the available areas IN THAT configuration, and clicking them will reposition and resize the window.
+
+![KWin FancyZones in action](KWin_FancyZones_in_action.jpg)
+
+## Installation
+
+1. clone/download this repo and open the folder in which this README is present (in your download location)
+2. open a terminal **in the folder**
+3. Run `make install` to install the script
+4. Run `make update` to enable the script
+
+You can also do `make disable` and `make enable` to manually disable/enable, OR you can use the `system settings` in KDE to enable/disable.
+
+> To remove it, just run `make remove` from the terminal *in that folder*.
+
+## Customization
+
+If you want to customize the areas, you'll need to edit the `AREAS_AND_DIMS` constant in the file `./contents/code/main.js`.
+
+`AREAS_AND_DIMS` is a constant array of configurations in JSON format.  
+Each configuration has the following format:
+
+```js
+{
+	id: "what ever config name you want here",
+	areas: [
+		{}, {}, ....
+	]
+}
+```
+
+Each of the `area` within a configuration has the following format:
+
+```js
+{
+	id: "area name",
+	x: 0,
+	y: 0,
+	width: 0.5,
+	height: 1,
+}
+```
+
+where `x`, `y`, `width` and `height` are floats with values between `0` and `1`.  
+`x` is the coordinate of the window's *top-left corner* measured horizontally rightward from `0`, where `0` refers the *top-left corner* of your screen and `1` is the *top-right corner*.  
+`y` is the coordinate of the window's *top-left corner* measured vertically downward from `0`, where `0` refers the *top-left corner* of your screen and `1` is the *top-right corner*.  
+`width` is the width of the window with respect to that of your screen. Screen width is considered to be `1`.   
+`height` is the width of the window with respect to that of your screen. Screen width is considered to be `1`.   
+
+### An example configuration
+
+```js
+const AREAS_AND_DIMS = [
+	{
+		id: "vertical_split",
+		areas: [
+			{
+				id: "left",
+				x: 0,
+				y: 0,
+				width: 0.5,
+				height: 1,
+			},
+			{
+				id: "right",
+				x: 0.5,
+				y: 0,
+				width: 0.5,
+				height: 1,
+			}
+		]
+	},
+	{
+		id: "middle_left_right",
+		areas: [
+			{
+				id: "middle",
+				x: 0.20,
+				y: 0,
+				width: 0.60,
+				height: 1,
+			},
+			{
+				id: "left-float",
+				x: 0,
+				y: 0.25,
+				width: 0.35,
+				height: 0.50,
+			},
+			{
+				id: "right-float",
+				x: 0.65,
+				y: 0.25,
+				width: 0.35,
+				height: 0.50,
+			}
+		]
+	}
+]
+```
+
+How it looks in the menu:
+
+![KWin FancyZones in action](KWin_FancyZones_in_action.jpg)
+
+## Helpful Developer info
 
 Installing script:
 `kpackagetool5 --type=KWin/Script -i .` from the directory in which this readme is present
