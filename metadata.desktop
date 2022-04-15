@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=KWin FancyZones
+Comment=Description of script.
+Icon=preferences-system-windows
+
+X-KDE-PluginInfo-Author=Enygmator
+X-KDE-PluginInfo-Email=tarun.aditya@hotmail.com
+X-KDE-PluginInfo-Name=KWin_FancyZones
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPLv3
+
+Type=Service
+X-KDE-ServiceTypes=KWin/Script
+X-Plasma-API=javascript
+X-Plasma-MainScript=code/main.js
