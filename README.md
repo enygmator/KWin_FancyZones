@@ -1,8 +1,11 @@
 # KWin_FancyZones
 
+> **DISCLAIMER**: This is a very pre-mature version, using some shortcuts to achieve its goal. IT IS STILL UNDER DEVELOPMENT AND WILL BE MORE USER-FRIENDLY SOON. **But that shouldn't stop you from using it successfully!**
+> P.S.: Contribute to make it better!
+
 This is a project that aims to bring FancyZones functionality to KWin which is the default windows manager for Plasma Desktop from KDE 💖 (Thanks to them for all the open-source stuff)
 
-This is a very pre-mature version, using some shortcuts to achieve its goal.
+## Using it
 
 Follow steps below to install it. After installing it, you can simply click on the window's user action menu. It can be manually invoked by clicking on the extreme top-left corener of a window with a title bar OR by selecting the window you want to manipulate and using the default keyboard shortcut `Alt + F3`.
 
